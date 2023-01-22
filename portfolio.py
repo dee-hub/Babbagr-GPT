@@ -20,7 +20,7 @@ with col1:
     image = Image.open('robot2.jpg')
     st.image(image, width=300)
     st.markdown(meta.SIDEBAR_INFO, unsafe_allow_html=True)
-    with st.expander("Here is how to make me help you 👇", expanded=False):
+    with st.expander("Meet Babbage 👾", expanded=False):
         st.markdown(meta.STORY, unsafe_allow_html=True)
 
 with col2:
@@ -29,10 +29,6 @@ with col2:
     chef = st.selectbox("Choose your prefered writing companion", index=1, options=["Curie", "Babbage", "Davinci"])
     if chef == "Babbage":
         model_type = "text-babbage-001"
-        with st.expander("About me 👇", expanded=False):
-            st.write("I am good at picking up obvious patterns in text and then using that as a reference to generate text. \
-                I can also perform broad classification tasks like assigning categories to industries, genres and media content. \
-                    For creative applications, I am able to understand enough structure to create simple plots and titles.")
         
         token_length = st.selectbox("Select a token length (how long you want the generated text to be)", index=3, options=[None, 10, 30, 60, 80, 100, 130, 150])
         temperature = st.selectbox("Select how diverse you want each idea to be. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.", index=2, options=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
