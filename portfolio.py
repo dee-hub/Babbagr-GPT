@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import meta
-import config
 from utils.st import (remote_css, local_css,)
 import openai
 
@@ -50,7 +49,7 @@ with col2:
 
         generate = st.button('Idea 💡')
         if generate:
-            openai.api_key = config.api_key
+            openai.api_key = st.secret["api_key"]
             generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=temperature, max_tokens=token_length)
             generated_text = generated_text_initial["choices"][0]['text']
             generated_text = generated_text.replace('\n\n', '\n')
