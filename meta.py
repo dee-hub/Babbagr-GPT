@@ -8,7 +8,7 @@ SIDEBAR_INFO = """
 CHEF_INFO = """
         <h2 class="font-title">Hello, I am Babbage! </h2>
         <p class="strong font-body">
-        <span class="d-block extra-info">(I am super excited to help you with some ideas for your writing.)</span>
+        <span class="d-block extra-info">(Select your preferred parameters or leave them as default to get started.)</span>
         </p>
 """.strip()
 ROMPT_BOX = "Add custom ingredients here (separated by `,`): "
