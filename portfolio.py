@@ -45,7 +45,7 @@ with col2:
 
         generate = st.button('Idea 💡')
         if generate:
-            openai.api_key = st.secret["api_key"]
+            openai.api_key = st.secrets["api_key"]
             generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=temperature, max_tokens=token_length)
             generated_text = generated_text_initial["choices"][0]['text']
             generated_text = generated_text.replace('\n\n', '\n')
