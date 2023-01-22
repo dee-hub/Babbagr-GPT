@@ -56,3 +56,5 @@ with col2:
 
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
+     elif chef == "Davinci" or "Curie":
+         st.write("Please check back, we are still developing prompts for Davinci and Curie")
