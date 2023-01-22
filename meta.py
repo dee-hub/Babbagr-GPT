@@ -2,7 +2,7 @@ HEADER_INFO = """""".strip()
 SIDEBAR_INFO = """
     <div class="contributors font-body text-bold">
         App Created by: <a class="contributor comma" href="https://linkedin.com/in/oluwadolapo-salako">Oluwadolapo Salako</a> <br>
-        Model built by: <a class="contributor comma" href="https://openai.com">OpenAi</a>
+        Model built by: <a class="contributor" href="https://openai.com">OpenAi</a>
         </div>
 """
 CHEF_INFO = """
