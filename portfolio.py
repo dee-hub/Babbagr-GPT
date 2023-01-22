@@ -32,7 +32,7 @@ with col2:
         
         token_length = st.selectbox("Select a token length (how long you want the generated text to be)", index=3, options=[None, 10, 30, 60, 80, 100, 130, 150])
         temperature = st.selectbox("Select how diverse you want each idea to be. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.", index=2, options=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
-        with st.expander("How to Use 👇", expanded=True):
+        with st.expander("How to Use 👇", expanded=False):
             st.write("I can be used for \n\n 1) Idea iteration e.g. you can type a prompt as simple as “Provide 7 tips to promote my blog” and I will automatically create a list of practical advice. \
                     You can do this for just about any topic that is reasonably well known. \
                         This can either provide standalone content or be used as a starting point \
