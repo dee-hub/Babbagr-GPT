@@ -5,7 +5,6 @@ import numpy as np
 import meta
 import config
 from utils.st import (remote_css, local_css,)
-import os
 import openai
 
 print(st.session_state)
