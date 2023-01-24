@@ -28,8 +28,7 @@ with col2:
     st.markdown(meta.CHEF_INFO, unsafe_allow_html=True)
     chef = st.selectbox("Choose your prefered writing companion", index=1, options=["Curie", "Babbage", "Davinci"])
     if chef == "Babbage":
-        model_type = "text-babbage-001"
-        
+        model_type = "text-babbage-001" 
         token_length = st.selectbox("Select a token length (how long you want the generated text to be)", index=3, options=[None, 10, 30, 60, 80, 100, 130, 150])
         temperature = st.selectbox("Select how diverse you want each idea to be. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.", index=2, options=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
         with st.expander("How to Use 👇", expanded=False):
@@ -56,5 +55,25 @@ with col2:
 
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
-    elif chef == "Davinci" or "Curie":
+    elif chef == "Curie":
+        model_type = "text-curie-001"      
+        token_length = st.selectbox("Select a token length (how long you want the generated text to be)", index=3, options=[None, 50, 150, 300, 450, 750])
+        temperature = st.selectbox("Select how diverse you want each idea to be. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.", index=2, options=[0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9])
+        with st.expander("How to Use 👇", expanded=False):
+            st.write("Typing...")
+        text = st.text_area('Start writing here: ', height=100)
+        generate = st.button('Idea 💡')
+        if generate:
+            openai.api_key = st.secrets["api_key"]
+            generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=temperature, max_tokens=token_length)
+            generated_text = generated_text_initial["choices"][0]['text']
+            generated_text = generated_text.replace('\n\n', '\n')
+            #generated_text = generated_text.replace(', '')
+            #texts = text + generated_text
+            #text = st.text_area("Start writing here", texts)
+            text = st.text_area("Results", generated_text, height=300)
+
+            with st.expander("API Results", expanded=False):
+                st.write(generated_text_initial)
+    elif chef == "Davinci":
         st.write("Please check back, we are still developing prompts for Davinci and Curie")
