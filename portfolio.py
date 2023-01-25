@@ -8,7 +8,7 @@ import openai
 
 print(st.session_state)
 st.set_page_config(
-        page_title="Dee the Writing Assistant",
+        page_title="Babbage: The Writing Assistant",
         page_icon="👾",
         layout="wide",
         initial_sidebar_state="expanded"
