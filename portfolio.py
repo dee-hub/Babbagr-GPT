@@ -5,6 +5,7 @@ import numpy as np
 import meta
 from utils.st import (remote_css, local_css,)
 import openai
+import pyperclip
 
 print(st.session_state)
 st.set_page_config(
@@ -52,7 +53,9 @@ with col2:
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
             text = st.write("Results", generated_text, height=300)
-
+            copy = st.button('Copy to Clipboard 📝')
+            if copy:
+                pyperclip.copy(text)
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
     elif chef == "Curie":
@@ -72,7 +75,9 @@ with col2:
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
             text = st.write("Results", generated_text, height=300)
-
+            copy = st.button('Copy to Clipboard 📝')
+            if copy:
+                pyperclip.copy(text)
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
     elif chef == "Davinci":
@@ -90,6 +95,8 @@ with col2:
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
             text = st.write("Results", generated_text, height=300)
-
+            copy = st.button('Copy to Clipboard 📝')
+            if copy:
+                pyperclip.copy(text)
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
