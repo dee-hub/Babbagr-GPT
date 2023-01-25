@@ -52,10 +52,11 @@ with col2:
             #generated_text = generated_text.replace(', '')
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
-            text = st.write("Results", generated_text, height=300)
+            text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
                 pyperclip.copy(text)
+                st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
     elif chef == "Curie":
@@ -74,10 +75,11 @@ with col2:
             #generated_text = generated_text.replace(', '')
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
-            text = st.write("Results", generated_text, height=300)
+            text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
                 pyperclip.copy(text)
+                st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
     elif chef == "Davinci":
@@ -94,9 +96,10 @@ with col2:
             #generated_text = generated_text.replace(', '')
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
-            text = st.write("Results", generated_text, height=300)
+            text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
                 pyperclip.copy(text)
+                st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
