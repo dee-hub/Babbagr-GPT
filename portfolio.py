@@ -55,7 +55,7 @@ with col2:
             text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
-                pyperclip.copy(text)
+                pyperclip.copy(generated_text)
                 st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
@@ -78,7 +78,7 @@ with col2:
             text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
-                pyperclip.copy(text)
+                pyperclip.copy(generated_text)
                 st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
@@ -99,7 +99,7 @@ with col2:
             text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
-                pyperclip.copy(text)
+                pyperclip.copy(generated_text)
                 st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
