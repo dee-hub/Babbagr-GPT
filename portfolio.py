@@ -47,11 +47,11 @@ with col2:
             openai.api_key = st.secrets["api_key"]
             generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=temperature, max_tokens=token_length)
             generated_text = generated_text_initial["choices"][0]['text']
-            generated_text = generated_text.replace('\n', '')
+            #generated_text = generated_text.replace('\n', '')
             #generated_text = generated_text.replace(', '')
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
-            text = st.text_area("Results", generated_text, height=300)
+            text = st.write("Results", generated_text, height=300)
 
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
@@ -67,11 +67,11 @@ with col2:
             openai.api_key = st.secrets["api_key"]
             generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=temperature, max_tokens=token_length)
             generated_text = generated_text_initial["choices"][0]['text']
-            generated_text = generated_text.replace('\n', '')
+            #generated_text = generated_text.replace('\n\n', '')
             #generated_text = generated_text.replace(', '')
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
-            text = st.text_area("Results", generated_text, height=300)
+            text = st.write("Results", generated_text, height=300)
 
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
@@ -85,11 +85,11 @@ with col2:
             openai.api_key = st.secrets["api_key"]
             generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=0.9, max_tokens=2000)
             generated_text = generated_text_initial["choices"][0]['text']
-            generated_text = generated_text.replace('\n', '')
+            #generated_text = generated_text.replace('\n', '')
             #generated_text = generated_text.replace(', '')
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
-            text = st.text_area("Results", generated_text, height=300)
+            text = st.write("Results", generated_text, height=300)
 
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
