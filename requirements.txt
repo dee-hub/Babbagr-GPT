@@ -1,4 +1,5 @@
 pyperclip
+clipboard 
 openai
 pandas
 streamlit
