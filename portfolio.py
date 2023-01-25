@@ -5,7 +5,7 @@ import numpy as np
 import meta
 from utils.st import (remote_css, local_css,)
 import openai
-import pyperclip
+import clipboard 
 
 print(st.session_state)
 st.set_page_config(
@@ -55,7 +55,7 @@ with col2:
             text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
-                pyperclip.copy(generated_text)
+                clipboard.copy(generated_text)
                 st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
@@ -78,7 +78,7 @@ with col2:
             text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
-                pyperclip.copy(generated_text)
+                clipboard.copy(generated_text)
                 st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
@@ -99,7 +99,7 @@ with col2:
             text = st.write("Results", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
-                pyperclip.copy(generated_text)
+                clipboard.copy(generated_text)
                 st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
