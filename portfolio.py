@@ -77,15 +77,13 @@ with col2:
                 st.write(generated_text_initial)
     elif chef == "Davinci":
         model_type = "text-davinci-003"      
-        token_length = st.selectbox("Select a token length (how long you want the generated text to be)", index=3, options=[None, 50, 150, 300, 450, 750])
-        temperature = st.selectbox("Select how diverse you want each idea to be. Try 0.9 for more creative applications, and 0 for ones with a well-defined answer.", index=2, options=[0, 0.2, 0.4, 0.6, 0.8, 0.9])
         with st.expander("How to Use 👇", expanded=False):
             st.write("Typing...")
         text = st.text_area('Start writing here: ', height=100)
         generate = st.button('Idea 💡')
         if generate:
             openai.api_key = st.secrets["api_key"]
-            generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=temperature, max_tokens=token_length)
+            generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=0.9, max_tokens=2000)
             generated_text = generated_text_initial["choices"][0]['text']
             generated_text = generated_text.replace('\n\n', '\n')
             #generated_text = generated_text.replace(', '')
