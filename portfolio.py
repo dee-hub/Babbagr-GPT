@@ -96,7 +96,7 @@ with col2:
             #generated_text = generated_text.replace(', '')
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
-            text = st.markdown("Results", generated_text)
+            text = st.write("Results \n", generated_text)
             copy = st.button('Copy to Clipboard 📝')
             if copy:
                 pyperclip.copy(generated_text)
