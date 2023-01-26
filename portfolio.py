@@ -53,10 +53,10 @@ with col2:
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
             text = st.write("Results", generated_text)
-            copy = st.button('Copy to Clipboard 📝')
-            if copy:
-                pyperclip.copy(generated_text)
-                st.success('Copied!')
+            #copy = st.button('Copy to Clipboard 📝')
+            #if copy:
+             #   pyperclip.copy(generated_text)
+              #  st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
     elif chef == "Curie":
@@ -76,10 +76,10 @@ with col2:
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
             text = st.write("Results", generated_text)
-            copy = st.button('Copy to Clipboard 📝')
-            if copy:
-                pyperclip.copy(generated_text)
-                st.success('Copied!')
+            #copy = st.button('Copy to Clipboard 📝')
+            #if copy:
+             #   pyperclip.copy(generated_text)
+              #  st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
     elif chef == "Davinci":
@@ -97,9 +97,9 @@ with col2:
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
             text = st.write("Results \n", generated_text)
-            copy = st.button('Copy to Clipboard 📝')
-            if copy:
-                pyperclip.copy(generated_text)
-                st.success('Copied!')
+            #copy = st.button('Copy to Clipboard 📝')
+            #if copy:
+             #   pyperclip.copy(generated_text)
+              #  st.success('Copied!')
             with st.expander("API Results", expanded=False):
                 st.write(generated_text_initial)
