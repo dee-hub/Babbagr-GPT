@@ -61,9 +61,9 @@ with col2:
    
     model_type = "text-davinci-003"      
     with st.expander("How to Use 👇", expanded=False):
-        st.write("The GPT-3 DaVinci model is used to generate natural language processing (NLP) tasks such as text summarization, question answering, dialogue generation and text rewriting. This model can be used for creative tasks such as story and poem generation. \
-\n \n The GPT-3 DaVinci model has the capability to produce text that sounds as if it were written by a human. It can also generate text in various styles, such as formal and informal. It is able to generate text that is personalized and tailored to a specific user’s needs. \
-\n \n The GPT-3 DaVinci model is also able to understand natural language inputs. This means it can apply contextual understanding, such as recognizing when a given sentence is a continuation of a previous sentence. Furthermore, this model can use natural language to process and extract information from different sources. This could be useful for tasks such as sentiment analysis and summarization of large documents.")
+        st.write("Example 1: DraftAssist can be used to generate creative and persuasive written content. For example, if we needed to write a persuasive letter to convince a potential customer to buy our product, we could use DraftAssist to generate text that is tailored to our requirements. \
+\n\n Example 2: DraftAssist can also be used to generate cover letters for job applications. By providing DraftAssist with the job description, it can quickly generate a compelling cover letter that speaks directly to the employer's needs and requirements. \
+\n\n Example 3: DraftAssist can also be used to generate newsletter content that is both interesting and informative. By providing DraftAssist with the desired topics and keywords, it can generate interesting content that speaks to what the reader wants to hear.
     text = st.text_area('Start writing here: ', height=100)
     generate = st.button('Idea 💡')
     if generate:
