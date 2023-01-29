@@ -26,7 +26,7 @@ with col1:
 
 with col2:
     st.markdown(meta.HEADER_INFO, unsafe_allow_html=True)
-    access = st.text_area("Enter your access code", height=20)
+    access = st.text_input("Enter your access code", type="password")
     access_code_secret = st.secrets["access_code"]
     access_button = st.button("Access 🔐")
     if access_button:
