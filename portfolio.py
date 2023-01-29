@@ -54,5 +54,7 @@ with col2:
               #  st.success('Copied!')
                 with st.expander("API Results", expanded=False):
                     st.write(generated_text_initial)
+            else:
+                st.write('Some error occurred')
         else:
             st.warning('Incorrect Access Code. Contact the Developer ', icon="⚠️")
