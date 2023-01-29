@@ -58,7 +58,7 @@ with col2:
               #  st.success('Copied!')
         #    with st.expander("API Results", expanded=False):
          #       st.write(generated_text_initial)
-    """
+   
     model_type = "text-davinci-003"      
     with st.expander("How to Use 👇", expanded=False):
         st.write("Typing...")
