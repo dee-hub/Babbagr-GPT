@@ -26,28 +26,32 @@ with col1:
 
 with col2:
     st.markdown(meta.HEADER_INFO, unsafe_allow_html=True)
-    access = st.text_area("Enter your access code")
+    access = st.text_area("Enter your access code", height=20)
     access_code_secret = st.secrets["access_code"]
-    if access == access_code_secret:
-        model_type = "text-davinci-003"      
-        with st.expander("How to Use 👇", expanded=False):
-            st.write("Example 1: DraftAssist can be used to generate creative and persuasive written content. For example, if we needed to write a persuasive letter to convince a potential customer to buy our product, we could use DraftAssist to generate text that is tailored to our requirements. \
+    access_button = st.button("Access 🔐")
+    if access_button:
+        if access == access_code_secret:
+            model_type = "text-davinci-003"      
+            with st.expander("How to Use 👇", expanded=False):
+                st.write("Example 1: DraftAssist can be used to generate creative and persuasive written content. For example, if we needed to write a persuasive letter to convince a potential customer to buy our product, we could use DraftAssist to generate text that is tailored to our requirements. \
 \n\n Example 2: DraftAssist can also be used to generate cover letters for job applications. By providing DraftAssist with the job description, it can quickly generate a compelling cover letter that speaks directly to the employer's needs and requirements. \
 \n\n Example 3: DraftAssist can also be used to generate newsletter content that is both interesting and informative. By providing DraftAssist with the desired topics and keywords, it can generate interesting content that speaks to what the reader wants to hear.")
-        text = st.text_area('Start writing here: ', height=100)
-        generate = st.button('Idea 💡')
-        if generate:
-            openai.api_key = st.secrets["api_key"]
-            generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=0.9, max_tokens=2000)
-            generated_text = generated_text_initial["choices"][0]['text']
+            text = st.text_area('Start writing here: ', height=100)
+            generate = st.button('Idea 💡')
+            if generate:
+                openai.api_key = st.secrets["api_key"]
+                generated_text_initial = openai.Completion.create(model=model_type, prompt=text, temperature=0.9, max_tokens=2000)
+                generated_text = generated_text_initial["choices"][0]['text']
             #generated_text = generated_text.replace('\n', '')
             #generated_text = generated_text.replace(', '')
             #texts = text + generated_text
             #text = st.text_area("Start writing here", texts)
-            text = st.write("Results \n", generated_text)
+                text = st.write("Results \n", generated_text)
             #copy = st.button('Copy to Clipboard 📝')
             #if copy:
              #   pyperclip.copy(generated_text)
               #  st.success('Copied!')
-            with st.expander("API Results", expanded=False):
-                st.write(generated_text_initial)
+                with st.expander("API Results", expanded=False):
+                    st.write(generated_text_initial)
+        else:
+            st.warning('Incorrect Access Code. Contact the Developer ', icon="⚠️")
