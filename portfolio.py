@@ -63,7 +63,7 @@ with col2:
     with st.expander("How to Use 👇", expanded=False):
         st.write("Example 1: DraftAssist can be used to generate creative and persuasive written content. For example, if we needed to write a persuasive letter to convince a potential customer to buy our product, we could use DraftAssist to generate text that is tailored to our requirements. \
 \n\n Example 2: DraftAssist can also be used to generate cover letters for job applications. By providing DraftAssist with the job description, it can quickly generate a compelling cover letter that speaks directly to the employer's needs and requirements. \
-\n\n Example 3: DraftAssist can also be used to generate newsletter content that is both interesting and informative. By providing DraftAssist with the desired topics and keywords, it can generate interesting content that speaks to what the reader wants to hear.
+\n\n Example 3: DraftAssist can also be used to generate newsletter content that is both interesting and informative. By providing DraftAssist with the desired topics and keywords, it can generate interesting content that speaks to what the reader wants to hear.")
     text = st.text_area('Start writing here: ', height=100)
     generate = st.button('Idea 💡')
     if generate:
