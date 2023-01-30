@@ -9,7 +9,7 @@ import openai
 print(st.session_state)
 st.set_page_config(
         page_title="DraftAssist: The AI based writing partner",
-        page_icon="👾",
+        page_icon="logo.png",
         layout="wide",
         initial_sidebar_state="expanded"
     )
