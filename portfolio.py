@@ -26,7 +26,7 @@ with col1:
 with col2:
     import streamlit as st
     st.title('DraftAssist 📝')
-    st.write("Welcome to DraftAssist 🥳")
+    st.write("Welcome to DraftAssist 🥳 v2.0")
     model_type = "text-davinci-003"      
     with st.expander("How to Use 👇", expanded=False):
         st.write("Example 1: DraftAssist can be used to generate creative and persuasive written content. For example, if we needed to write a persuasive letter to convince a potential customer to buy our product, we could use DraftAssist to generate text that is tailored to our requirements. \
